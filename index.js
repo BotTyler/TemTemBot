@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const config = require('./config.json')
 const puppeteer = require("puppeteer")
 var loading = 1;
 const table = [[1,1,1,1,1,1,.5,1,1,1,1,1],
@@ -274,5 +273,5 @@ client.on("message", msg => {
     }
 });
 
-client.login(config.token);
+client.login(process.env.DJS_TOKEN);
 
