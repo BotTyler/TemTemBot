@@ -218,13 +218,14 @@ client.on("ready", () => {
 
 client.on("message", msg => {
 
-    if(ListOfTem == null){
-        msg.reply("BOT IS STARTING UP!");
-        return;
-    }
+
     var s = msg.content.split(" ");
     
     if(s[0].toUpperCase() === "TEM"){
+        if(ListOfTem == null){
+            msg.reply("BOT IS STARTING UP!");
+            return;
+        }
         for(var index = 1; index < s.length; index ++){
             if(s[index].toLowerCase() === "cyka"){
                 msg.reply("BLYAT");
