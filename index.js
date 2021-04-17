@@ -66,7 +66,7 @@ var ListOfTem;
 
 async function scrape(url){
 
-
+    loading = 1;
     const browser = await puppeteer.launch({args: ['--no-sandbox']});
     const page = await browser.newPage();
     await page.goto(url);
@@ -222,7 +222,7 @@ client.on("message", msg => {
     var s = msg.content.split(" ");
     
     if(s[0].toUpperCase() === "TEM"){
-        if(ListOfTem == null){
+        if(ListOfTem == null || loading == 1){
             msg.reply("BOT IS STARTING UP!");
             return;
         }
@@ -235,10 +235,6 @@ client.on("message", msg => {
                 msg.reply("REFRESHING LIST");
                 refresh();
                 msg.reply("LIST HAS BEEN REFRESHED");
-                return;
-            }
-            if(loading == 1){
-                msg.reply("PLEASE WAIT THE LIST IS BEING RESET");
                 return;
             }
             for(var counter = 0; counter < ListOfTem.length; counter ++){
