@@ -241,6 +241,9 @@ client.on("message", msg => {
           var message = "";
         if(k == -1)
           return;
+        if(s[2] == null)
+          return;
+        message = "Found element " + sprite(s[2].toLowerCase())
         message+=sprite("neutral") + " = "+ table[0][key] + "\n";
         message+=sprite("fire") + " = "+ table[1][key] + "\n";
         message+=sprite("water") + " = "+ table[2][key] + "\n";
@@ -253,7 +256,7 @@ client.on("message", msg => {
         message+=sprite("melee") + " = "+ table[9][key] + "\n";
         message+=sprite("crystal") + " = "+ table[10][key] + "\n";
         message+=sprite("toxic") + " = "+ table[11][key] + "\n";
-        
+        return;
       }
         for(var index = 1; index < s.length; index ++){
             if(s[index].toLowerCase() === "cyka"){
