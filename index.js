@@ -256,6 +256,7 @@ client.on("message", msg => {
         message+=sprite("melee") + " = "+ table[9][key] + "\n";
         message+=sprite("crystal") + " = "+ table[10][key] + "\n";
         message+=sprite("toxic") + " = "+ table[11][key] + "\n";
+        msg.reply(message);
         return;
       }
         for(var index = 1; index < s.length; index ++){
