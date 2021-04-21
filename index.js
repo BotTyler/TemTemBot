@@ -53,6 +53,9 @@ var key = function(obj){
         case "toxic":
             return 11;
             break;
+      default:
+        return -1
+        break;
     }
 }
 
@@ -134,6 +137,9 @@ function printArray(){
 
 
 function calcDmg(row, t1, t2){
+  if(t1 == -1 || t2 == -1)
+    return -1;
+  
     if(t1 == t2){
         return table[row][t1];
     }else{
@@ -230,9 +236,11 @@ client.on("message", msg => {
         msg.reply("Please specify a temtem");
         return;
       }
-      if(s[1].toUpperCase() === "ele" && s[2] != null){
+      if(s[1].toUpperCase() === "ele"){
           var k = key(s[2]);
           var message = "";
+        if(k == -1)
+          return;
         message+=sprite("neutral") + " = "+ table[0][key] + "\n";
         message+=sprite("fire") + " = "+ table[1][key] + "\n";
         message+=sprite("water") + " = "+ table[2][key] + "\n";
