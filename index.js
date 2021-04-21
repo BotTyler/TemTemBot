@@ -226,6 +226,27 @@ client.on("message", msg => {
             msg.reply("BOT IS STARTING UP!");
             return;
         }
+      if(s.length == 1){
+        msg.reply("Please specify a temtem");
+        return;
+      }
+      if(s[1].toUpperCase() === "ele" && s[2] != null){
+          var k = key(s[2]);
+          var message = "";
+        message+=sprite("neutral") + " = "+ table[0][key] + "\n";
+        message+=sprite("fire") + " = "+ table[1][key] + "\n";
+        message+=sprite("water") + " = "+ table[2][key] + "\n";
+        message+=sprite("nature") + " = "+ table[3][key] + "\n";
+        message+=sprite("electric") + " = "+ table[4][key] + "\n";
+        message+=sprite("earth") + " = "+ table[5][key] + "\n";
+        message+=sprite("mental") + " = "+ table[6][key] + "\n";
+        message+=sprite("wind") + " = "+ table[7][key] + "\n";
+        message+=sprite("digital") + " = "+ table[8][key] + "\n";
+        message+=sprite("melee") + " = "+ table[9][key] + "\n";
+        message+=sprite("crystal") + " = "+ table[10][key] + "\n";
+        message+=sprite("toxic") + " = "+ table[11][key] + "\n";
+        
+      }
         for(var index = 1; index < s.length; index ++){
             if(s[index].toLowerCase() === "cyka"){
                 msg.reply("BLYAT");
