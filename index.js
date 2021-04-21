@@ -237,13 +237,12 @@ client.on("message", msg => {
         return;
       }
       if(s[1].toLowerCase() === "ele"){
-          var k = key(s[2]);
+          var k = key(s[2].toLowerCase());
           var message = "";
         if(k == -1)
           return;
-        if(s[2] == null)
-          return;
-        message = "Found element " + sprite(s[2].toLowerCase())
+
+        message = "Found element " + sprite(s[2].toLowerCase()) + "\n";
         message+=sprite("neutral") + " = "+ table[0][key] + "\n";
         message+=sprite("fire") + " = "+ table[1][key] + "\n";
         message+=sprite("water") + " = "+ table[2][key] + "\n";
