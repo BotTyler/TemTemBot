@@ -236,7 +236,7 @@ client.on("message", msg => {
         msg.reply("Please specify a temtem");
         return;
       }
-      if(s[1].toUpperCase() === "ele"){
+      if(s[1].toLowerCase() === "ele"){
           var k = key(s[2]);
           var message = "";
         if(k == -1)
