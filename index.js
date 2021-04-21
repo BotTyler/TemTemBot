@@ -243,18 +243,18 @@ client.on("message", msg => {
           return;
 
         message = "Found element " + sprite(s[2].toLowerCase()) + "\n";
-        message+=sprite("neutral") + " = "+ table[0][key] + "\n";
-        message+=sprite("fire") + " = "+ table[1][key] + "\n";
-        message+=sprite("water") + " = "+ table[2][key] + "\n";
-        message+=sprite("nature") + " = "+ table[3][key] + "\n";
-        message+=sprite("electric") + " = "+ table[4][key] + "\n";
-        message+=sprite("earth") + " = "+ table[5][key] + "\n";
-        message+=sprite("mental") + " = "+ table[6][key] + "\n";
-        message+=sprite("wind") + " = "+ table[7][key] + "\n";
-        message+=sprite("digital") + " = "+ table[8][key] + "\n";
-        message+=sprite("melee") + " = "+ table[9][key] + "\n";
-        message+=sprite("crystal") + " = "+ table[10][key] + "\n";
-        message+=sprite("toxic") + " = "+ table[11][key] + "\n";
+        message+=sprite("neutral") + " = "+ table[0][k] + "\n";
+        message+=sprite("fire") + " = "+ table[1][k] + "\n";
+        message+=sprite("water") + " = "+ table[2][k] + "\n";
+        message+=sprite("nature") + " = "+ table[3][k] + "\n";
+        message+=sprite("electric") + " = "+ table[4][k] + "\n";
+        message+=sprite("earth") + " = "+ table[5][k] + "\n";
+        message+=sprite("mental") + " = "+ table[6][k] + "\n";
+        message+=sprite("wind") + " = "+ table[7][k] + "\n";
+        message+=sprite("digital") + " = "+ table[8][k] + "\n";
+        message+=sprite("melee") + " = "+ table[9][k] + "\n";
+        message+=sprite("crystal") + " = "+ table[10][k] + "\n";
+        message+=sprite("toxic") + " = "+ table[11][k] + "\n";
         msg.reply(message);
         return;
       }
